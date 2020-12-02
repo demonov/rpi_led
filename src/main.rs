@@ -16,7 +16,7 @@ fn main() {
         .build()
         .unwrap();
 
-    let mut led = controller.leds_mut(0);
+    let led = controller.leds_mut(0);
     for i in 0..300 {
         let i = i as usize;
         if i % 4 < 2 {
@@ -26,8 +26,8 @@ fn main() {
         }
     }
 
-    controller.render();
-    //   controller.wait();
+    controller.render().unwrap();
+    controller.wait().unwrap();
 
     println!("Done.");
 }

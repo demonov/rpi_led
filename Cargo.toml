@@ -8,3 +8,9 @@ edition = "2018"
 
 [dependencies]
 rppal = "0.7.0"
+rs_ws281x = "0.3.1"
+
+[build-dependencies.bindgen]
+version = "0.54"
+default-features = false
+features=["runtime"]

@@ -1,0 +1,16 @@
+[package]
+name = "rpi_led_spi"
+version = "0.1.0"
+authors = ["Andrew"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rppal = "0.7.0"
+rs_ws281x = "0.3.1"
+
+[build-dependencies.bindgen]
+version = "0.54"
+default-features = false
+features=["runtime"]
